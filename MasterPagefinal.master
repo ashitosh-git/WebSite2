@@ -1,0 +1,173 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPagefinal.master.vb" Inherits="MasterPagefinal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1
+        {
+            height: 700px;
+        }
+    </style>
+       <style>
+
+           ul.svertical{
+width: 200px; /* width of menu */
+overflow: auto;
+background: black; /* background of menu */
+margin: 0;
+padding-top: 7px; /* top padding */
+list-style-type: none;
+            height: 395px;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+
+ul.svertical li{
+text-align: right; /* right align menu links */
+}
+
+ul.svertical li a{
+position: relative;
+display: inline-block;
+text-indent: 5px;
+overflow: hidden;
+background: rgb(127, 201, 68); /* initial background color of links */
+font: bold 16px Germand;
+text-decoration: none;
+padding: 5px;
+margin-bottom: 7px; /* spacing between links */
+color: black;
+-moz-box-shadow: inset -7px 0 5px rgba(114,114,114, 0.8); /* inner right shadow added to each link */
+-webkit-box-shadow: inset -7px 0 5px rgba(114,114,114, 0.8);
+box-shadow: inset -7px 0 5px rgba(114,114,114, 0.8);
+-moz-transition: all 0.2s ease-in-out; /* CSS3 transition of hover properties */
+-webkit-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+
+ul.svertical li a:hover{
+padding-right: 30px; /* add right padding to expand link horizontally to the left */
+color: black;
+background: rgb(153,249,75);
+-moz-box-shadow: inset -3px 0 2px rgba(114,114,114, 0.8); /* contract inner right shadow */
+-webkit-box-shadow: inset -3px 0 5px rgba(114,114,114, 0.8);
+box-shadow: inset -3px 0 5px rgba(114,114,114, 0.8);
+}
+
+ul.svertical li a:before{ /* CSS generated content: slanted right edge */
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+border-style: solid; 
+border-width: 70px 0 0 20px; /* Play around with 1st and 4th value to change slant degree */
+border-color: transparent transparent transparent black; /* change black to match the background color of the menu UL */
+
+}
+
+</style>
+
+</head>
+<body style="height: 698px; width: 1066px; margin-left: 119px">
+    <form id="form1" runat="server">
+    <div style="width: 1067px; height: 44px; margin-left: 0px; background-color: #000000;">
+        &nbsp;<asp:HyperLink ID="HyperLink4" 
+            runat="server" ForeColor="White" NavigateUrl="~/About us.aspx">About  Us</asp:HyperLink>
+&nbsp;|
+        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="White" 
+            NavigateUrl="~/contacts.aspx">Contact Us</asp:HyperLink>
+&nbsp;|
+        <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="White" 
+            NavigateUrl="~/login.aspx">Login</asp:HyperLink>
+&nbsp;|
+        <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="White" 
+            NavigateUrl="~/Sign up.aspx">Sign Up</asp:HyperLink>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label1" runat="server" Text="Search" ForeColor="White"></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="180px"></asp:TextBox>
+    &nbsp;
+        <asp:Button ID="Button1" runat="server" Text="GO" />
+    </div>
+    <div style="height: 202px"><div style="height: 198px; background-color: #FF0000;">
+        <asp:Image ID="Image1" runat="server" Height="149px" 
+            ImageUrl="~/images/main image.jpg" Width="1067px" />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <asp:HyperLink ID="HyperLink5" runat="server" Font-Size="Large" 
+            NavigateUrl="~/home.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp; &nbsp;
+        <asp:HyperLink ID="HyperLink6" runat="server" Font-Size="Large">Books</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;
+&nbsp;
+        <asp:HyperLink ID="HyperLink7" runat="server" Font-Size="Large" 
+            NavigateUrl="~/Top added books.aspx">Top 5 Books</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink8" runat="server" Font-Size="Large" 
+            NavigateUrl="~/Recently added books.aspx">Recently Added Books</asp:HyperLink>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink9" runat="server" Font-Size="Large" 
+            NavigateUrl="~/My Favoriate.aspx">My favorite</asp:HyperLink>
+&nbsp; &nbsp; 
+        <asp:HyperLink ID="HyperLink10" runat="server" Font-Size="Large" 
+            NavigateUrl="~/About us.aspx">About Us</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp; 
+        <asp:HyperLink ID="HyperLink11" runat="server" Font-Size="Large" 
+            NavigateUrl="~/contacts.aspx">Contact Us</asp:HyperLink>
+        </div>
+    </div>
+    <div style="width: 267px; height: 763px; background-color: #FFFF99;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label2" runat="server" Text="All Categories" Font-Size="X-Large"></asp:Label>
+        <br />
+        <br />
+<div style="z-index: 1; left: 381px; top: 251px; position: absolute; height: 765px; width: 804px; background-color: #C0C0C0;">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+        </div>
+
+    <div style="height: 395px; width: 200px; top: -15px; left: 3px; position: relative;"><ul class="svertical">
+<li><a href="Language.aspx">Language</a></li>
+<li><a href="Stories%20fun%20.aspx" >Stories and Fun</a></li>
+<li><a href="computer.aspx">Computer</a></li>
+<li><a href="Science.aspx">Science</a></li>
+<li><a href="Electronics.aspx">Electronics</a></li>
+<li><a href="Mechancial.aspx">Mechanical</a></li>		
+<li><a href="Physics.aspx">Physics</a></li>
+<li><a href="Networking.aspx">Networking</a></li>
+<li><a href="Top%20added%20books.aspx">Top 5 added Books</a></li>
+<li><a href="Recently%20added%20books.aspx">Recently Added Book</a></li>
+<li><a href="My%20Favoriate.aspx">My favorite</a></li>
+</ul>
+</div>
+        <asp:Image ID="Image2" runat="server" Height="316px" 
+            ImageUrl="~/images/iStock_book-with-mouse.jpg" Width="267px" />
+    </div>
+<div style="height: 88px; width: 1069px; background-color: #FFFFFF;">
+    <p style="height: 30px; margin-left: 3px; background-color: #000000; z-index: 1; left: 122px; top: 1003px; position: absolute; width: 1058px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink12" runat="server" ForeColor="White" 
+            NavigateUrl="~/home.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink13" runat="server" ForeColor="White" 
+            NavigateUrl="~/About us.aspx">About Us</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="HyperLink14" runat="server" ForeColor="White" 
+            NavigateUrl="~/contacts.aspx">Contact Us</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label3" runat="server" Font-Size="Large" ForeColor="White" 
+            Text="copyright@My Book Store.com @SVERI (POLY.)Pandharpur.TY.CO.2011-2012"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+    </p>
+</div>
+
+    </form>
+</body>
+</html>
